@@ -33,10 +33,13 @@ public class RequestParamServlet extends HttpServlet {
         System.out.println();
 
         System.out.println("[이름이 같은 복수 파라미터 조회]");
+
         String[] usernames = request.getParameterValues("username");
+
         for (String name : usernames) {
             System.out.println("username = " + name);
         }
+
         System.out.println();
 
         response.getWriter().write("okay");
